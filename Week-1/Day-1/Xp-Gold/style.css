@@ -1,0 +1,97 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f0f0f0;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.header-name {
+    font-weight: 600;
+}
+
+.sign-button {
+    background: #004C94;
+    border: transparent;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+main {
+    background: url("./img/plants.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 35%;
+    padding: 10rem 0;
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.main-title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    width: 50%;
+    color: #F52020;
+}
+
+.email-input {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.advantages {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.advantages-list {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.advantages-topics {
+    padding: 2rem 1rem;
+    text-align: center;
+    width: 250px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 4px 4px 4px gray;
+}
+
+.advantages-topics i {
+    color: #F52020;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.advantages-topics__title {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.advantages-topics__text {
+    font-size: 0.75rem;
+    color: gray;
+}
