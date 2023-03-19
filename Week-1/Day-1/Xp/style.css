@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 .highlight-text {
     background-color: yellow;
 }

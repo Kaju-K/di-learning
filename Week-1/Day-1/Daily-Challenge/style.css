@@ -1,0 +1,83 @@
+body {
+    background: url("./img/thor.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1b1b1b;
+    padding: 1rem;
+}
+
+.avengers-logo {
+    height: 7rem;
+}
+
+.navigation {
+    margin-right: 3rem;
+    z-index: 10;
+}
+
+.navigation-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.navigation-links {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.navigation-links:hover {
+    color: #dda9cd;
+}
+
+main {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 2rem;
+    padding-top: 50vh;
+    margin-bottom: 1rem;
+}
+
+.content {
+    background: rgba(221, 169, 205, 0.7);
+    border-radius: 10px;
+    padding: 1rem;
+    width: fit-content;
+}
+
+.thor-name {
+    font-size: 8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.thor-description {
+    width: 30vw;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+@media screen and (max-width:1500px) {
+    .navigation-links {
+        font-size: 1.5rem;
+    }
+
+    .thor-name {
+        font-size: 6rem;
+    }
+}
