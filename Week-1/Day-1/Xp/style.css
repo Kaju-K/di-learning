@@ -1,0 +1,53 @@
+.highlight-text {
+    background-color: yellow;
+}
+
+.about li {
+    margin-left: 3rem;
+}
+
+.history li {
+    list-style-type: upper-roman;
+}
+
+.media {
+    text-align: center;
+}
+
+.animal-picture {
+    height: 200px;
+    border: 10px solid #e06e3c;
+    display: block;
+    margin: 2rem auto 0 auto;
+}
+
+.differences {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.differences-highlight {
+    text-align: center;
+    border: 1px solid red;
+    color: red;
+    font-weight: 600;
+}
+
+table, tr, td {
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+}
+
+.head-row {
+    text-align: center;
+    font-weight: 700;
+}
+
+.information-row td {
+    padding: 1rem 0.5rem;
+}
