@@ -1,0 +1,66 @@
+.main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(var(--main-gray), var(--lighter-gray));
+    color: white;
+}
+
+.main-container {
+    height: 70%;
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.profile-picture {
+    width: 300px;
+    aspect-ratio: 1/1;
+    background-image: url("../img/perfil.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    border: 3px solid black;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    animation: profile-border 4s ease-in-out infinite alternate;
+}
+
+@keyframes profile-border {
+    100% {border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;}
+}
+
+.main-content {
+    width: 350px;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 1rem 0;
+    color: var(--main-green);
+}
+
+.main-title-text {
+    font-size: 1.5rem;
+}
+
+.main-media-icons {
+    margin: 3rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-media-links {
+    text-decoration: none;
+    color: var(--main-green);
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-link-text {
+    font-size: 1.2rem;
+    color: white;
+}

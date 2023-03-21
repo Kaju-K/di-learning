@@ -1,0 +1,29 @@
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.boxes {
+    width: 100px;
+    aspect-ratio: 1/1;
+    background-color: yellow;
+    border: 1px solid black;
+}
+
+.second-containers {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.edge-container {
+    gap: 1rem;
+    flex-direction: column;
+}
+
+.middle-container {
+    flex: 1;
+    align-items: center;
+    gap: 3rem;
+}

@@ -1,0 +1,39 @@
+@import url("./styles/main.css");
+@import url("./styles/skills.css");
+@import url("./styles/contact.css");
+
+:root {
+    --main-gray: #333333;
+    --lighter-gray: #4B4D52;
+    --main-green: #00AC7C;
+    --secondary-gray: #ABABAB;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.section-container {
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.section-container:nth-child(2n) {
+    background: linear-gradient(var(--lighter-gray), var(--main-gray));
+}
+
+.section-container:nth-child(2n+1) {
+    background: linear-gradient(var(--main-gray), var(--lighter-gray));
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--main-green);
+    font-weight: 700;
+}

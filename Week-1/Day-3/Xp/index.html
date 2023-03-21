@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Font Aweome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Nunito Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="main-container">
+            <div class="profile-picture"></div>
+            <div class="main-content">
+                <p class="main-title-text">Full-stack developer</p>
+                <h1 class="main-title">Marcelo Kogut</h1>
+
+                <p class="main-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui accusantium ad asperiores odit aspernatur, quidem illo officiis similique! Asperiores voluptates laborum eligendi perspiciatis provident ullam animi similique, neque culpa beatae.</p>
+
+                <div class="main-media-icons">
+                    <a href="https://github.com/Kaju-K" class="main-media-links" target="_blank">
+                        <i class="fa-brands fa-square-github"></i> <span class="main-link-text">Github</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/marcelo-kogut/" class="main-media-links" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i> <span class="main-link-text">Linkedin</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="section-container skills">
+        <h2 class="section-title">My Skills</h2>
+        <div class="all-skills">
+            <div class="skills-container">
+                <i class="fa-solid fa-desktop skill-icon"></i>
+                <div class="skills-content-container">
+                    <h3 class="skills-name">Front-End</h3>
+                    <hr>
+                    <p class="skills-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quae quaerat nam obcaecati ad illo hic quibusdam magnam commodi architecto placeat necessitatibus at amet! Obcaecati necessitatibus accusantium tempore tempora quae.
+                    </p>
+                    <div class="skills-programs-container">
+                        <img src="./img/html-logo.svg" alt="html logo" class="skills-programs">
+                        <img src="./img/css-logo.svg" alt="css logo" class="skills-programs">
+                        <img src="./img/js-logo.svg" alt="javascript logo" class="skills-programs">
+                        <img src="./img/react-logo.svg" alt="react logo" class="skills-programs">
+                    </div>
+                </div>
+            </div>
+            <div class="skills-container">
+                <i class="fa-solid fa-code skill-icon"></i>
+                <div class="skills-content-container">
+                    <h3 class="skills-name">Back-End</h3>
+                    <hr>
+                    <p class="skills-text">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus quidem magni animi, fugit veritatis omnis doloremque mollitia eum reiciendis iste incidunt, possimus optio molestiae fugiat voluptatibus eaque earum iusto hic.
+                    </p>
+                    <div class="skills-programs-container">
+                        <img src="./img/python-logo.svg" alt="python logo" class="skills-programs">
+                        <img src="./img/nodejs-logo.svg" alt="node js logo" class="skills-programs">
+                    </div>
+                </div>
+            </div>
+            <div class="skills-container">
+                <i class="fa-solid fa-code-branch skill-icon"></i>
+                <div class="skills-content-container">
+                    <h3 class="skills-name">Logic</h3>
+                    <hr>
+                    <p class="skills-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam eius repellendus doloremque repudiandae quasi ea error magni aut sit expedita laudantium, ullam quidem illo consectetur dicta! Voluptatem tempore itaque quae.
+                    </p>
+                </div>
+            </div>
+            <div class="skills-container">
+                <i class="fa-regular fa-comment skill-icon"></i>
+                <div class="skills-content-container">
+                    <h3 class="skills-name">Communication</h3>
+                    <hr>
+                    <p class="skills-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam eaque recusandae quas aperiam ex inventore harum exercitationem? Magni exercitationem officia, saepe in, autem, nemo est cum nisi enim consequatur dolor!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="contact-form">
+            <input type="text" name="name" id="name" class="form-name form-input" placeholder="Enter your name...">
+            <input type="email" name="email" id="email" class="form-email form-input" placeholder="Enter your email...">
+            <textarea name="text-message" id="text-message" cols="30" rows="5" class="form-text-area form-input" placeholder="Enter your message..."></textarea>
+            <button type="submit" class="form-button">Send</button>
+        </form>
+    </section>
+</body>
+</html>
