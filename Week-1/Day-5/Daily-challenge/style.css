@@ -1,0 +1,113 @@
+:root {
+    --gap: 3rem;
+    --boxes-row: 4;
+}
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem auto;
+    gap: var(--gap);
+    width: 80%;
+}
+
+.boxes {
+    width: calc((100% - var(--gap)*(var(--boxes-row) - 1))/var(--boxes-row));
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 2rem;
+    color: white;
+    transition: 0.4s ease;
+    box-sizing: border-box;
+}
+
+.fade {
+    background-color: gray;
+    opacity: 0.5;
+}
+
+.fade:hover {
+    opacity: 1;
+}
+
+.color {
+    background-color: red;
+}
+
+.color:hover {
+    background-color: blue;
+}
+
+.shrink {
+    background-color: aqua;
+}
+
+.shrink:hover {
+    scale: 0.8;
+}
+
+.rotate {
+    background-color: yellow;
+}
+
+.rotate:hover {
+    rotate: -30deg
+}
+
+.circle {
+    background-color: purple;
+}
+
+.circle:hover {
+    border-radius: 50%;
+}
+
+.shadow {
+    background-color: brown;
+}
+
+.shadow:hover {
+    box-shadow: 10px 10px aqua;
+    translate: -10px;
+}
+
+.swing {
+    background-color: lime;
+}
+
+.swing:hover {
+    -webkit-animation: swing 1s ease;
+    animation: swing 1s ease;
+}
+
+@keyframes swing {
+    20% {translate: -10px;}
+    40% {translate: 10px;}
+    60% {translate: -10px;}
+    80% {translate: 10px;}
+    100% {translate: 0px;}
+}
+
+.border {
+    background-color: black;
+}
+
+.border:hover {
+    border: 30px solid aqua;
+}
+
+.grow {
+    background-color: #ff2a94;
+    flex-grow: 1;
+    aspect-ratio: 9/1;
+}
+
+.grow:hover {
+    scale: 10;
+}
