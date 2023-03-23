@@ -1,0 +1,62 @@
+@import url("./styles/navigation.css");
+@import url("./styles/main.css");
+@import url("./styles/skills.css");
+@import url("./styles/projects.css");
+
+:root {
+    --gray-nav: #f0f0f0;
+    --gray: #4B4D52;
+    --darker-gray: #333333;
+    --size-nav: 25%;
+    --main-green: #00AC7C;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: "Nunito", sans-serif;
+}
+
+.container {
+    width: calc(100% - var(--size-nav));
+    display: flex;
+    box-sizing: border-box;
+    padding: 3rem;
+    border: none;
+    background-image: url("./img/background-image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    overflow-y: auto;
+}
+
+.page {
+    position: absolute;
+    opacity: 0;
+    width: 60%;
+    display: none;
+    transition: 1s ease;
+}
+
+.page--active {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-bottom: 3rem;
+    -webkit-animation: fadein 1s ease;
+    animation: fadein 1s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadein {
+    100% {opacity: 1;}
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--main-green);
+}

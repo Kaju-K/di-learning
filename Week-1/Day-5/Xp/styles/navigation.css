@@ -1,0 +1,72 @@
+.navigation {
+    width: var(--size-nav);
+    height: 100%;
+    background-color: var(--gray-nav);
+    border-right: 1px solid gray;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.profile-picture {
+    width: 50%;
+    aspect-ratio: 1/1;
+    background-image: url("../img/perfil.jpg");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    border: 3px solid black;
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+    animation: profile-border 4s ease-in-out infinite alternate;
+}
+
+@keyframes profile-border {
+    100% {border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;}
+}
+
+.nav-information {
+    text-align: center;
+}
+
+.my-name {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-description {
+    margin: 1rem 0;
+    color: var(--gray);
+}
+
+.nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    text-decoration: none;
+    color: var(--darker-gray);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-link--active {
+    color: var(--main-green);
+    position: relative;
+}
+
+.nav-link--active::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--main-green);
+}

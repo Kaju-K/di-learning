@@ -1,0 +1,43 @@
+.all-skills {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    /* margin: 2rem; */
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 2rem;
+}
+
+.skill-icon {
+    font-size: 3rem;
+    color: var(--main-green);
+    text-align: right;
+}
+
+.skills-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.skills-text {
+    color: var(--secondary-gray);
+    text-align: justify;
+}
+
+hr {
+    border: 1px solid var(--gray);
+}
+
+.skills-programs-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.skills-programs {
+    margin: 1rem 0;
+    height: 2.5rem;
+}

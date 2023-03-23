@@ -1,0 +1,42 @@
+.main-page {
+    align-self: center;
+}
+
+.main-description {
+    text-align: justify;
+}
+
+.main-media-icons {
+    margin: 2rem 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-media-links {
+    text-decoration: none;
+    color: var(--main-green);
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.main-link-text {
+    font-size: 1.2rem;
+    color: var(--darker-gray);
+}
+
+.curriculum-link {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid var(--main-green);
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--darker-gray);
+    font-size: 1.2rem;
+}
+
+.download-curriculum {
+    color: var(--main-green);
+    font-size: 1.2rem;
+}

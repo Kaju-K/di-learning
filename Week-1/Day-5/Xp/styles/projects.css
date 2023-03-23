@@ -1,0 +1,39 @@
+.card-project {
+    text-decoration: none;
+    width: 110%;
+    display: flex;
+    gap: 2rem;
+    border: 1px solid var(--gray);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 2px 2px var(--gray);
+    transition: 0.2s ease;
+}
+
+.card-project:hover {
+    translate: -2px -2px;
+}
+
+.card-image {
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-project-content {
+    padding: 1rem 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: black;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: var(--main-green);
+    font-weight: 600;
+}
+
+.card-description {
+    line-height: 1.2rem;
+}
