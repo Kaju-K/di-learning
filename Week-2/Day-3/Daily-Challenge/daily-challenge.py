@@ -1,18 +1,14 @@
 # Challenge 1
 
 word = input("Write a word: ")
-word_set = set(word)
 
 indexing_dict = {}
 
-for letter in word_set:
-    index = 0
-    for i in range(word.count(letter)):
-        try:
-            indexing_dict.get(letter).append(word.index(letter, index))
-        except:
-            indexing_dict[letter] = [word.index(letter, index)]
-        index = word.index(letter, index) + 1
+for index, letter in enumerate(word):
+    if letter in indexing_dict:
+        indexing_dict[letter].append(index)
+    else:
+        indexing_dict[letter] = [index]
 
 print(indexing_dict)
 
