@@ -3,10 +3,6 @@
 # If this is not considered the message would be: This is Matr ix
 # Which is also understandable, but the word is cutted in the middle by a space
 
-import string
-
-alphabet = string.ascii_letters
-
 message = """7i3
 Tsi
 h%x
@@ -21,9 +17,10 @@ message_matrix = [list(text) for text in message_list]
 
 decripted_message = ""
 
+
 for i in range(len(message_matrix[0])):
     for j in range(len(message_matrix)):
-        if (message_matrix[j][i] in alphabet):
+        if (message_matrix[j][i].isalpha()):
             decripted_message += message_matrix[j][i]
         else:
             try:
