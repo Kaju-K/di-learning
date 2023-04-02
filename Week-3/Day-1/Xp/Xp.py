@@ -10,17 +10,8 @@ cat2 = Cat("Tom", 2023-1940)
 cat3 = Cat("Garfield", 2023-1978)
 
 
-def older(*args):
-    oldest_cat = None
-
-    for cat in args:
-        if (not oldest_cat):
-            oldest_cat = cat
-        else:
-            if (cat.age > oldest_cat.age):
-                oldest_cat = cat
-
-    return oldest_cat
+def older(*cats):
+    return max(cats, key=lambda cat: cat.age)
 
 oldest_cat = older(cat1, cat2, cat3)
 
