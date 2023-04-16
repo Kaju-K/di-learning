@@ -1,0 +1,28 @@
+Exercise 1:
+Count
+3
+
+But the query is giving:
+Count
+0
+
+Although it's strange, I could find why this is happening here: https://stackoverflow.com/questions/129077/null-values-inside-not-in-clause
+Apparently the "NOT IN" with "NULL" values will always return UNKNOWN, doesn't matter what you are comparing
+
+Execise 2:
+Following the idea of the previous exercise, since one of the values in the first table in "NULL", this one will not be returned, despite "NULL" not being in the table only containing five, so:
+
+Count
+2
+
+Exercise 3:
+since there is a "NULL" value on the second table, the output will be the same as the first exercise
+
+Count
+0
+
+Exercise 4:
+The output will be the same as exercise 2, because it's only selecting the id 5 of the second table
+
+Count
+2
