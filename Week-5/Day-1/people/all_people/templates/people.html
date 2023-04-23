@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+</head>
+<body>
+    <h1>Welcome to the Database of people belonging to the society of corn lovers</h1>
+    <h2>These are our members so far:</h2>
+    <ul>
+        {%for person in people%}
+        <li>
+            <a href="{%url 'specific_person' person.id%}">{{person.name}}</a> - {{person.age}} years old - Country: {{person.country}}
+        </li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
