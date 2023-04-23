@@ -1,0 +1,18 @@
+{% extends 'animal.html' %}
+
+    {% block title %}
+    Dog
+    {% endblock title %}
+
+    {% block content %}
+    <a href="../family/2">Go back to Caninae family</a>
+
+    {% for x in animals %}
+        {% if x.name == "Dog" %}
+        <h1>Here are some informations regarding a {{ x.name }}</h1>
+        
+        <h2>{{x}}</h2>
+        {% endif %}
+    {% endfor %}
+
+    {% endblock content %}
