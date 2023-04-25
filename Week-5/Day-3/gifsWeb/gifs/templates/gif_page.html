@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'nav_bar.html' %}
+
+    <form style="margin: 2rem;" method="get" action="{% url 'homepage' %}">
+        {%for category in categories%}
+        <input type="checkbox" name="category" id="{{category.name}}" value="{{category.id}}" {% if category.id in selected_categories %}checked{% endif %}>
+        <label for="{{category.name}}" style="margin-right: 2rem;">{{category.name}}</label>
+        {%endfor%}
+        <button type="submit">Filter</button>
+    </div>
+
+    <ul style="display: flex; gap: 1rem; flex-wrap: wrap; list-style: none;">
+        {%for gif in gifs%}
+        <li style="border: 1px solid black; border-radius: 10px; box-shadow: 4px 4px 4px 4px gray; padding: 1rem;">
+            <p>{{gif.title}}</p>
+            <img src="{{gif.url}}" alt="{{gif.title}}" style="height: 10rem; aspect-ratio: 1/1;">
+        </li>
+        {%endfor%}
+    </ul>
+</body>
+</html>
