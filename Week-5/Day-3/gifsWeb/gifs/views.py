@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Gif, Category
 from .forms import GifForm, CategoryForm
 from django.http import HttpResponse
@@ -32,13 +32,24 @@ def add_category(request):
     context = {'form': category_form}
     return render(request, 'add_category.html', context)
     
+def increment_likes(request, gif_id):
+    gif = Gif.objects.get(id=gif_id)
+    gif.likes += 1
+    gif.save()
+    return redirect('homepage')
 
+def decrement_likes(request, gif_id):
+    gif = Gif.objects.get(id=gif_id)
+    gif.likes -= 1
+    gif.save()
+    return redirect('homepage')
 
 def gif_page(request):
     selected_categories = request.GET.getlist('category')
     int_selected_categories = list(map(lambda x: int(x), selected_categories))
-    gifs = Gif.objects.all()
+    gifs = Gif.objects.all().order_by('title')
     if selected_categories:
         categories = Category.objects.filter(id__in=selected_categories)
         gifs = list(set(gifs.filter(categories__in=categories)))
-    return render(request, 'gif_page.html', {'gifs': gifs, 'categories': Category.objects.all(), 'selected_categories': int_selected_categories})
+    context = {'gifs': gifs, 'categories': Category.objects.all(), 'selected_categories': int_selected_categories}
+    return render(request, 'gif_page.html', context)

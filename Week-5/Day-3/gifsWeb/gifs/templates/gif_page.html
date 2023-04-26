@@ -22,6 +22,15 @@
         <li style="border: 1px solid black; border-radius: 10px; box-shadow: 4px 4px 4px 4px gray; padding: 1rem;">
             <p>{{gif.title}}</p>
             <img src="{{gif.url}}" alt="{{gif.title}}" style="height: 10rem; aspect-ratio: 1/1;">
+            <p>Likes: {{gif.likes}}</p> 
+            <form method="POST" action="{% url 'increment_likes' gif.id %}">
+                {% csrf_token %}
+                <button type="submit">Like</button>
+            </form>
+            <form method="POST" action="{% url 'decrement_likes' gif.id %}">
+                {% csrf_token %}
+                <button type="submit">Dislike</button>
+            </form>
         </li>
         {%endfor%}
     </ul>
