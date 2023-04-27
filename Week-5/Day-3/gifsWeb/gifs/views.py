@@ -11,11 +11,12 @@ def add_gif(request):
     if request.method == "POST":
         gif_filled_form = GifForm(request.POST)
         if gif_filled_form.is_valid():
-            gif_filled_form.save()
-            
-            context = {'message': "Gif"}
+            new_gif = gif_filled_form.save(commit=False)
+            categories = gif_filled_form.cleaned_data['categories']
 
-            return render(request, 'successfull.html', context)
+            new_gif.categories.add(*categories)
+            
+            return HttpResponse("Your GIF was successfully saved")
     context = {'form': gif_form}
 
     return render(request, 'add_gif.html', context)
@@ -27,8 +28,8 @@ def add_category(request):
         category_filled_form = CategoryForm(request.POST)
         if category_filled_form.is_valid():
             category_filled_form.save()
-            context = {'message': "category"}
-            return render(request, 'successfull.html', context)
+
+            return HttpResponse("Your category was successfully saved")
     context = {'form': category_form}
     return render(request, 'add_category.html', context)
     
