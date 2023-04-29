@@ -1,0 +1,14 @@
+{%extends 'base.html '%}
+
+    {%block title%}
+    Rental Views
+    {%endblock title%}
+
+    {%block content%}
+    <ul>
+        {% for rent in rentals%}
+        <li style="margin: 1rem;">{{rent.customer}} - {{rent.rental_date}} - {{rent.return_date}} - <a href="{%url 'specific_rent' rent.id%}">Check Rent</a></li>
+        {%endfor%}
+        
+    </ul>
+    {%endblock content%}

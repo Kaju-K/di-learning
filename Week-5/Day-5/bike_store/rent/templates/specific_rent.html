@@ -1,0 +1,19 @@
+{%extends 'base.html'%}
+
+    {%block title%}
+    {%endblock title%}
+
+    {%block content%}
+    <a href="{% url 'rental_views' %}">Go back to rental views</a>
+    <br>
+    <p>
+        {{rent.customer}} rented a {{rent.vehicle}} on {{rent.rental_date}}
+    </p>
+    <p>
+        {%if rent.return_date%}
+            And retuned on {{rent.return_date}}
+        {%else%}
+            And still didn't return
+        {%endif %}
+    </p>
+    {%endblock content%}
