@@ -1,0 +1,17 @@
+{%extends 'base.html'%}
+
+    {%block title%}
+    {{customer.first_name}} {{customer.last_name}}
+    {%endblock title%}
+
+    {%block content%}
+    <a href="{%url 'customer_views'%}">Go back to see all customers</a>
+    <h1>This is the profile of {{customer.first_name}} {{customer.last_name}}</h1>
+    <ul>
+        <li>Email: {{customer.email}}</li>
+        <li>Phonenumber: {{customer.phone_number}}</li>
+        <li>Address: {{customer.address}}</li>
+        <li>City: {{customer.city}}</li>
+        <li>Country: {{customer_country}}</li>
+    </ul>
+    {%endblock content%}

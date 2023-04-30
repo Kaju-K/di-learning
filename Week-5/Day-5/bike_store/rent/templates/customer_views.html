@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+    {%block title%}
+    All Customers
+    {%endblock title%}
+
+    {%block content%}
+    <ul>
+        {%for customer in customers%}
+        <li style="margin: 1rem;">
+            {{customer}} - <a href="{%url 'specific_customer' customer.id%}">Go to profile</a>
+        </li>
+        {%endfor%}
+    </ul>
+    {%endblock content%}

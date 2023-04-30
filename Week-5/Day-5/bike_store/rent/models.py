@@ -1,6 +1,7 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
 from django_countries.fields import CountryField
+from django.utils import timezone
 
 # Create your models here.
 class Customer(models.Model):
@@ -37,7 +38,7 @@ class VehicleSize(models.Model):
         return f"{self.name}"
 
 class Rental(models.Model):
-    rental_date = models.DateField()
+    rental_date = models.DateField(default = timezone.now)
     return_date = models.DateField(null=True, blank=True)
     customer = models.ForeignKey("Customer", on_delete=models.PROTECT)
     vehicle = models.ForeignKey("Vehicle", on_delete=models.PROTECT)
