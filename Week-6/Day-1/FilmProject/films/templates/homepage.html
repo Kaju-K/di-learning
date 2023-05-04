@@ -1,0 +1,21 @@
+{%extends 'partials/base.html'%}
+
+    {%block content%}
+    <h1>These are the films in our repository</h1>
+    <ul>
+        {%for film in films%}
+        <li>
+            <p>
+                {{film.title}}
+            </p>
+            <p>Made by 
+                {%for director in film.director.all%}
+                {{director}} -  
+                {%endfor%}
+                on {{film.release_date}}</p>
+            <p>Country of origin: {{film.created_in_country}}</p>
+            <a href="{%url 'update_films' film.pk%}">Update film</a>
+        </li>
+        {%endfor%}
+    </ul>
+    {%endblock content%}
