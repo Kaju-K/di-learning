@@ -1,7 +1,8 @@
 {%extends 'partials/base.html'%}
 
     {%block content%}
-    <h1>These are the films in our repository</h1>
+    {%if user.is_authenticated%}
+    <h1>These are the films in our repository, {{user}}</h1>
     <ul>
         {%for film in films%}
         <li>
@@ -14,8 +15,13 @@
                 {%endfor%}
                 on {{film.release_date}}</p>
             <p>Country of origin: {{film.created_in_country}}</p>
+            {%if user.is_superuser%}
             <a href="{%url 'update_films' film.pk%}">Update film</a>
+            {%endif%}
         </li>
         {%endfor%}
     </ul>
+    {%else%}
+    <h1>Login to see the movies</h1>
+    {%endif%}
     {%endblock content%}

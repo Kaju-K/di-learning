@@ -2,10 +2,28 @@
     <li class="nav-item">
         <a class="nav-link link-light" href="{%url 'homepage'%}">HOME</a>
     </li>
+    {%if user.is_authenticated %}
     <li class="nav-item">
         <a class="nav-link link-light" href="{%url 'add_films'%}">Add Film</a>
     </li>
     <li class="nav-item">
         <a class="nav-link link-light" href="{%url 'add_director'%}">Add Director</a>
     </li>
+    {%endif%}
+    <li class="nav-item">
+        {%if user.is_authenticated%}
+            {% if user.profile %}
+            <a class="nav-link link-light" href="{% url 'profile' user.profile.id %}">{{user.username}}</a>
+            {%else%}
+            <a class="nav-link link-light" href="{% url 'profile_redirect' %}">{{user.username}}</a>
+            {%endif%}
+        {%else%}
+        <a class="nav-link link-light" href="{%url 'login'%}">Login</a>
+        {%endif%}
+    </li>
+    {%if user.is_authenticated%}
+    <li class="nav-item">
+        <a class="nav-link link-light" href="{% url 'logout' %}">Logout</a>
+    </li>
+    {%endif%}
 </ul>

@@ -1,0 +1,14 @@
+{%extends 'partials/base.html'%}
+
+    {%block title%}
+    Profile
+    {%endblock title%}
+
+    {%block content%}
+    <p>
+        Your name: {{user_profile.first_name}}
+    </p>
+    <p>
+        Your last name: {{user_profile.last_name}}
+    </p>
+    {%endblock content%}

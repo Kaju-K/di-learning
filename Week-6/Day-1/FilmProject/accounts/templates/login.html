@@ -1,0 +1,14 @@
+{%extends 'partials/base.html'%}
+
+    {%block title%}
+    Login
+    {%endblock title%}
+
+    {%block content%}
+    <form action="" method="post">
+        {%csrf_token%}
+        {{form}}
+        <button type="submit">Login</button>
+    </form>
+    <a href="{%url 'signup'%}">Sign Up</a>
+    {%endblock content%}
