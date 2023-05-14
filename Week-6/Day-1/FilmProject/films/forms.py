@@ -1,5 +1,5 @@
 from django import forms
-from .models import Film, Director
+from .models import Film, Director, Comments
 
 class AddFilmForm(forms.ModelForm):
     class Meta:
@@ -13,4 +13,16 @@ class AddDirectorForm(forms.ModelForm):
     class Meta:
         model = Director
         fields = "__all__"
-        
+
+class CommentsForm(forms.ModelForm):
+    class Meta:
+        model = Comments
+        fields = "__all__"
+        labels = {
+            'comment': "Let your comment:"
+        }
+        widgets = {
+            'comment': forms.Textarea(),
+            'user': forms.HiddenInput(),
+            'film': forms.HiddenInput(),
+        }

@@ -2,12 +2,21 @@
 
     {%block content%}
     {%if user.is_authenticated%}
+        {%if messages%}
+        <div style="text-align: center; margin: 1rem;">
+            {%for message in messages%}
+            <p style="padding: 1rem; display: inline-block; border-radius: 5px; background-color: aqua;">{{message}}</p>
+            {%endfor%}
+        </div>
+        {%endif%}
     <h1>These are the films in our repository, {{user}}</h1>
     <ul>
         {%for film in films%}
         <li>
             <p>
-                {{film.title}}
+                <a href="{% url 'film_page' film.id%}">
+                    {{film.title}}
+                </a>
             </p>
             <p>Made by 
                 {%for director in film.director.all%}
@@ -17,7 +26,12 @@
             <p>Country of origin: {{film.created_in_country}}</p>
             {%if user.is_superuser%}
             <a href="{%url 'update_films' film.pk%}">Update film</a>
+            <form action="{% url 'delete_movie' film.id%}" method="post">
+                {%csrf_token%}
+                <button type="submit" style="background-color: red; color: white;">Delete</button>
+            </form>
             {%endif%}
+
         </li>
         {%endfor%}
     </ul>

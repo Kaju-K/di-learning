@@ -1,5 +1,7 @@
 from django.db import models
 from django_countries.fields import CountryField
+from django.contrib.auth.models import User
+from datetime import date
 
 # Create your models here.
 class Country(models.Model):
@@ -31,3 +33,12 @@ class Director(models.Model):
 
     def __str__(self) -> str:
         return f"{self.first_name} {self.last_name}"
+    
+class Comments(models.Model):
+    comment = models.CharField(max_length=200)
+    film = models.ForeignKey("Film", on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self) -> str:
+        return self.comment
