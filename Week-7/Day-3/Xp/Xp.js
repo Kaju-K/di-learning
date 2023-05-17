@@ -55,16 +55,15 @@ for (let i = 0; i < colors.length; i++) {
 
 // only works on the DOM
 
-// let number = 0;
-// while (number < 10) {
-//     number = prompt("Choose a number");
+// let number;
+// do {
+//     number = parseFloat(prompt("Please enter a number:"));
 //     if (isNaN(number)) {
-//         console.log("You should put a number. Try again.");
-//         number=0;
+//         console.log("You should put a number. Try again")
 //     }
-// };
+//   } while (isNaN(number) || number < 10);
 
-// console.log("Nice");
+// console.log("Number entered:", number);
 
 // Exercise 4
 
