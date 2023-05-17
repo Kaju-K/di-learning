@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">Users:</div>
+    <ul class="list">
+        <li>John</li>
+        <li>Pete</li>
+    </ul>
+    <ul class="list">
+        <li>David</li>
+        <li>Sarah</li>
+        <li>Dan</li>
+    </ul>
+
+    <script>
+        let division = document.querySelector("div")
+        let body = document.querySelector("body")
+        let lists = document.querySelectorAll(".list")
+        let firstList = lists[0]
+        let secondList = lists[1]
+
+        console.log(firstList)
+        console.log(firstList.children)
+        // changing Pete to Richard
+        for (let child of firstList.children) {
+            if (child.innerText == "Pete") {
+                child.innerText = "Richard"
+            }
+        }
+        // Deleting Sarah
+        for (let child of secondList.children) {
+            if (child.innerText == "Sarah") {
+                child.remove()
+            }
+        }
+        // Changing first name to my name and adding class "student_list"
+        for (let child of lists) {
+            child.firstElementChild.innerText = "Kogut"
+            child.classList.add("student_list")
+        }
+        firstList.classList.add('university', 'attendance')
+
+        division.setAttribute("style", "background-color: lightblue; padding: 1rem;")
+        firstList.firstElementChild.setAttribute("style", "display: None;")
+        firstList.children[1].setAttribute("style", "border: 1px solid black")
+
+        body.setAttribute("style", "font-size: 2rem")
+    </script>
+</body>
+
+</html>
