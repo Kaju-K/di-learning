@@ -25,5 +25,5 @@ const marioGame = {
 let stringfiedMarioGame = JSON.stringify(marioGame)
 let prettyStringfiedMarioGame = JSON.stringify(marioGame,null, 4)
 
-console.log(stringfiedMarioGame) // all the spaces, identatios and line breaks are deleted
+console.log(stringfiedMarioGame) // all the spaces, identations and line breaks are deleted, the nested are also converted automatically
 console.log(prettyStringfiedMarioGame)
