@@ -1,0 +1,82 @@
+.main {
+    background-color: rgb(10, 82, 105);
+    background-image: url("./img/background/circuit-pattern.png");
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background: url("./img/background/lines.png");
+    background-size: contain;
+    background-color: lightgreen;
+}
+
+.search-form {
+    display: flex;
+}
+
+.search-bar {
+    height: 2rem;
+    width: 15rem;
+    background-color: lightgray;
+}
+
+.search-button {
+    height: 2rem;
+    aspect-ratio: 1/1;
+    border: transparent;
+    background: transparent;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: rgb(33, 21, 100);
+    letter-spacing: 3px;
+    font-family: 'VT323', monospace;
+}
+
+.cards-container {
+    width: 60%;
+    margin: 0rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100%*1/4), 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.card {
+    background-image: url("./img/background/card-pattern.png");
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: lightblue;
+}
+
+.card-image {
+    border-radius: 50% 50%;
+    width: 90%;
+    aspect-ratio: 1/1;
+    background-color: rgb(43, 48, 95);
+}
+
+.card-information {
+    width: 100%;
+}
+
+.robot-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    font-family: 'VT323', monospace;
+}
+
+.robot-description {
+    font-size: 0.8rem;
+}
