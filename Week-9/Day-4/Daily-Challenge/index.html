@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Currency Converter</h1>
+        <form class="my-form">
+            <label for="first-currency">From:</label>
+            <select name="first-currency" id="first-currency" required>
+                <option value="" selected disabled hidden>Select the currency</option>
+            </select>
+            
+            <label for="second-currency">To:</label>
+            <select name="second-currency" id="second-currency" required>
+                <option value="" selected disabled hidden>Select the currency</option>
+            </select>
+    
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" required>
+    
+            <button type="submit">Convert</button>
+        </form>
+    
+        <button class="swap">Swap</button>
+
+        <div class="result"></div>
+    </div>
+
+    <script src="api_key.js"></script>
+    <script src="addingCodes.js"></script>
+    <script src="main.js"></script>    
+</body>
+</html>
