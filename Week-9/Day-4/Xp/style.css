@@ -1,0 +1,56 @@
+@font-face {
+    font-family: StarWars;
+    src: url('./fonts/starjedi/Starjedi.ttf');
+}
+
+body {
+    background-image: url("https://i.giphy.com/media/TxVVB6PfWMjE4/200.webp");
+    color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 2rem;
+    font-family: "Helvetica Neue";
+    margin: 0;
+}
+
+.logo {
+    height: 30%;
+}
+
+.container-information {
+    border: 2px solid yellow ;
+    border-radius: 10px;
+    min-height: 40%;
+    min-width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.container-information > p {
+    margin: 0.75rem;
+}
+
+.character-name {
+    font-size: 1.875rem;
+    font-weight: 700;
+}
+
+.find {
+    font-family: StarWars, sans-serif;
+    padding: 0.5rem;
+    border: 2px solid yellow;
+    color: yellow;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
