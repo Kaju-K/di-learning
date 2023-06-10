@@ -1,6 +1,7 @@
 {
-  "name": "daily_challenge",
+  "name": "xp",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
-  },
-  "description": ""
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "knex": "^2.4.2",
+    "p4ssw0rd": "^1.0.7",
+    "pg": "^8.11.0"
+  }
 }
