@@ -1,0 +1,19 @@
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    background-color: #ffebcd;
+    width: 40%;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+
+.vote_button {
+    background-color: transparent;
+    border: transparent;
+    font-size: 2rem;
+    color: green;
+    cursor: pointer;
+}
