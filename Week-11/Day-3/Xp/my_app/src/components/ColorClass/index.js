@@ -23,6 +23,7 @@ class ColorClass extends React.Component {
     getSnapshotBeforeUpdate(prevProps, prevState) {
         const div = document.querySelector('#previous')
         div.innerHTML = `<p>Before the update, the favorite color was ${prevState.favoriteColor}</p>`
+        console.log('in getSnapshotBeforeUpdate')
         return true
     }
 
